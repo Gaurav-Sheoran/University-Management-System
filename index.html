@@ -1,0 +1,161 @@
+</html>
+<head>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous">
+  </script>
+<title>
+       UMS</title>
+<style type="text/css">
+body{
+      margin:0;
+
+      background-image: url("public/images/user3.jpg");
+
+       
+}
+.container{
+           width:500px;
+           height:400px;
+           text-align:center;
+           background-color:skyblue;
+           opacity:0.85;
+           border-radius:4px;
+           margin:0 auto;
+           margin-top:150px;
+	   		padding-bottom:30px;
+}
+.container img{
+      width:120px;
+      height:120px;
+      margin-top:-60px;
+	margin-bottom: 30px;     
+}
+input[type="text"], input[type="password"]{
+     height:45px;
+     width:300px;
+     font-size:18px;
+     margin-bottom:20px;
+     background-color:#fff;
+     padding-left:20px;
+}
+.btn-login{
+        padding:15px;
+        color:white;
+        background-color:red;
+        border:none;
+        border-radius:4px;
+        border-bottom:4px solid red;
+}
+
+a{
+  text-decoration:none;
+  color:white;
+}
+a:hover{
+      color:black;
+}
+#ums_logo
+{
+	opacity: 1;
+	height: 50px;
+	width: 383px;
+	margin-top: .10px;
+	align: 0 auto;
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+
+  position: absolute;
+top: 48%;
+left: 48%;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+.spinner-wrapper {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #479dff;
+z-index: 999999;
+}
+
+
+</style>
+
+</head>
+<body>
+	<div class="spinner-wrapper">
+<div class="spinner"></div>
+</div>
+
+<div class="container">
+
+<img src="public/images/LPU-logo.png"/>
+    <form>
+    	<img id="ums_logo" src="public/images/ums_logo.png">
+         <div class="form-input">
+             <input type="text" id="username" placeholder="Enter Username">
+         </div>
+         <div class="form-input">
+           <input type="password" id="password" placeholder="Enter Password">
+         </div>
+        <button type="button" class="btn-login" onclick="myf()">
+          Login
+        </button>
+    </form><br>
+    <a href="#" onclick="myf2()" >Forgot password?</a>
+	
+</div>
+<lower>
+</lower>
+<script>
+function myf2(){
+	alert('Contact at 18001024431 or visit Block-30')
+}
+function myf(){
+  var username=$('#username').val();
+  var password=$('#password').val();
+  if(username=='username'&&password=='password'){
+    window.location.href="user_profile.html";
+  }
+  else alert('Wrong Username or Password');
+}
+</script>
+<script>
+$(document).ready(function() {
+//Preloader
+preloaderFadeOutTime = 3000;
+function hidePreloader() {
+var preloader = $('.spinner-wrapper');
+preloader.fadeOut(preloaderFadeOutTime);
+}
+hidePreloader();
+});
+</script>
+</body>
+</html>
